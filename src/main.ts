@@ -36,3 +36,13 @@ for (const product of sortedByPrice) {
   console.log(product.displayDetails(), "- Price with tax:", calculateTax(product));
 }
 console.log("--------------------");
+
+const bulkWeightThreshold = 2; 
+const bulkDiscountPercent = 5; 
+
+for (const product of inventory) {
+  if (product instanceof PhysicalProduct && product.weight > bulkWeightThreshold) {
+    product.applyDiscount(bulkDiscountPercent);
+    console.log(`Bulk discount applied to ${product.name} (${bulkDiscountPercent}% off)`);
+  }
+}
