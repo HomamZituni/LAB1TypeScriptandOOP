@@ -14,4 +14,25 @@ for (const product of inventory) {
   console.log("--------------------");
 }
 
+laptop.applyDiscount(10);
+console.log("After 10% discount:");
+console.log(laptop.displayDetails());
+console.log("Price with tax:", calculateTax(laptop));
+console.log("--------------------");
 
+
+import { sortByName, sortByPrice } from "./utils/sortProducts";
+
+console.log("Inventory sorted by name:");
+const sortedByName = sortByName(inventory);
+for (const product of sortedByName) {
+  console.log(product.displayDetails(), "- Price with tax:", calculateTax(product));
+}
+console.log("--------------------");
+
+console.log("Inventory sorted by price:");
+const sortedByPrice = sortByPrice(inventory);
+for (const product of sortedByPrice) {
+  console.log(product.displayDetails(), "- Price with tax:", calculateTax(product));
+}
+console.log("--------------------");
