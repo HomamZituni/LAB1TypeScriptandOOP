@@ -11,3 +11,4 @@ export abstract class Product {
 
   abstract getPriceWithTax(): number;
 }
+

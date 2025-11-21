@@ -1,4 +1,4 @@
-import { Product } from "./Product";
+import { Product } from "./Product.js";
 import { DiscountableProduct } from "./DiscountableProduct";
 
 export class PhysicalProduct extends Product implements DiscountableProduct {
