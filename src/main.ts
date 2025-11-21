@@ -1,7 +1,7 @@
-import { PhysicalProduct } from "./models/PhysicalProduct";
-import { DigitalProduct } from "./models/DigitalProduct";
-import { calculateTax } from "./utils/taxCalculator";
-import { sortByName, sortByPrice } from "./utils/sortProducts";
+import { PhysicalProduct } from "./models/PhysicalProduct.js";
+import { DigitalProduct } from "./models/DigitalProduct.js";
+import { calculateTax } from "./utils/taxCalculator.js";
+import { sortByName, sortByPrice } from "./utils/sortProducts.js";
 
 
 const laptop = new PhysicalProduct("P1", "Laptop", 1200, 2.5);
